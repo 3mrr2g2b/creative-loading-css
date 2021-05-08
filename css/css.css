@@ -1,0 +1,48 @@
+@font-face{
+    font-family:'a';
+    src:url("../fonts/free_font_12.ttf");
+    font-weight:bold;
+}
+@font-face{
+    font-family:'b';
+    src:url("../fonts/free_font_30.ttf");
+    font-weight:bold;
+}
+body{
+        padding: 0;
+        margin: 0;
+        font-family: Trebuchet MS;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #1d1d1e;
+        
+}
+h2 {
+    font-size: 3em;
+    -webkit-text-stroke: 0.2vw #003984;
+    color: #1d1d1e;
+    position: relative;
+    /*text-transform: uppercase;*/
+}
+h2::before {
+    content: 'Creative...';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color:#005EBD;
+    border-right: 2px solid #005EBD;
+    animation: anim 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes anim{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
